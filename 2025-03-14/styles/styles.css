@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column; /* Stacks the content vertically */
+    justify-content: flex-start; /* Keeps content at the top */
+    height: 100vh; /* Ensures the body takes up the full height of the viewport */
+    padding: 20px;
+    margin: 0;
+}
+
+/* Main container - Flex layout for left and right containers */
+.main-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns the left and right containers side by side */
+    align-items: flex-start; /* Ensures that both containers are aligned at the top */
+    width: 100%;
+    max-width: 1100px; /* Limits the overall width */
+    margin-top: 100px;
+    margin-bottom: 100px; /* Adds some space before the footer */
+    margin-left: 200px;
+    flex-grow: 1; /* Allows the main container to take the remaining space */
+}
+
+/* Left container - Aligns to the top */
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top */
+    align-items: center; /* Centers logo and description */
+    margin-right: 30px; /* Adds space between the left and right containers */
+    flex: 1; /* Left container takes remaining space */
+}
+
+.fb_logo {
+    width: 300px;
+    margin-bottom: -10px;
+    margin-right: 7.5cm;
+}
+
+h2 {
+    font-size: 24px;
+    color: #1c1e21;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Right container - Contains the login form */
+.right-container {
+    display: flex;
+    justify-content: center; /* Centers the login form horizontally */
+    align-items: center; /* Vertically centers the form */
+    flex: 1; /* Right container takes remaining space */
+}
+
+/* Login form container */
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px; /* Limits the login form width */
+}
+
+/* Form input styles */
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #1877f2;
+    outline: none;
+}
+
+/* Button styles */
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn_login {
+    background-color: #1877f2;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn_login:hover {
+    background-color: #165cbb;
+}
+
+.fgt_password {
+    color: #1877f2;
+    text-align: center;
+    font-size: 14px;
+}
+
+.fgt_password:hover {
+    text-decoration: underline;
+}
+
+.hr {
+    border: 0;
+    border-top: 1px solid #dddfe2;
+    margin: 20px 0;
+}
+
+.btn_create_acc {
+    background-color: #42b72a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn_create_acc:hover {
+    background-color: #36a420;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #737373;
+    font-size: 12px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.footer-languages, .footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-languages a, .footer-info a {
+    color: #737373;
+}
+
+.footer-languages a:hover, .footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    margin-top: 10px;
+}
