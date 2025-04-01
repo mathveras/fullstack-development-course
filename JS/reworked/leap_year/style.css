@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+input, button {
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+.leap {
+    background-color: #d4edda;
+    color: #155724;
+}
+.not-leap {
+    background-color: #f8d7da;
+    color: #721c24;
+}

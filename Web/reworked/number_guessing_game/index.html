@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to the </br>Number Guessing Game!</h1>
+        <div class="score-container">
+          <span>Score: <span id="score">0</span></span>
+          <span>Record: <span id="highscore">0</span></span>
+        </div>
+      </header>
+
+      <main>
+        <div class="game-info">
+          <div class="difficulty-selector">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+              <option value="easy">Easy (1-10)</option>
+              <option value="medium">Medium (1-50)</option>
+              <option value="hard">Hard (1-100)</option>
+            </select>
+          </div>
+          <p id="game-description" class="description">Guess a number between <span id="range">1 and 10</span> in up to <span id="max-attempts">10</span> attempts.</p>
+          <p id="attempts-left">Remaining attempts: <span id="attempts">10</span></p>
+        </div>
+
+        <div class="game-container">
+          <div class="input-container">
+            <input type="number" id="guess-input" placeholder="Type your guess" min="1" max="10">
+            <button id="guess-button">Submit</button>
+          </div>
+
+          <div class="feedback-container">
+            <p id="previous-guesses" class="guesses"></p>
+            <p id="result-message" class="result-message"></p>
+            <div id="hint-container" class="hint-container">
+              <div id="hint-bar" class="hint-bar">
+                <div id="hint-marker" class="hint-marker"></div>
+              </div>
+              <div class="hint-labels">
+                <span>Lesser</span>
+                <span>Greater</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="new-game" class="hidden">New Game</button>
+        </div>
+      </main>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <h2 id="modal-title"></h2>
+          <p id="modal-message"></p>
+          <button id="modal-close">Continue</button>
+        </div>
+      </div>
+      
+      <div class="reset-container">
+        <button id="reset-record" class="reset-button">Clear Records</button>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

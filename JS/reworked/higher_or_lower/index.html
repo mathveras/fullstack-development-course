@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Number Comparator</title>
+</head>
+
+<body>
+    <h1>Higher or Lower?</h1>
+    <div id="inputs-container">
+        <div class="input-group">
+            <input type="number" placeholder="Enter first number" class="number-input">
+        </div>
+        <div class="input-group">
+            <input type="number" placeholder="Enter second number" class="number-input">
+        </div>
+    </div>
+    
+    <div class="button-group">
+        <button id="addInputBtn">Add Number (+)</button>
+        <button id="compareBtn">Compare Numbers</button>
+        <button id="clearBtn">Clear All</button>
+    </div>
+    
+    <div class="results-container">
+        <div id="basicResult">Enter at least 2 numbers to compare</div>
+        <div class="result-box">
+            <div class="result-title">Ascending Order</div>
+            <div id="ascendingResult" class="number-list"></div>
+        </div>
+        <div class="result-box">
+            <div class="result-title">Descending Order</div>
+            <div id="descendingResult" class="number-list"></div>
+        </div>
+    </div>
+    
+    <script src="number_comparator.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press the button!</title>
+</head>
+
+<body>
+    <button id="btn">Press me!</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function() {
+            alert("Button was pressed!");
+            
+            let script = document.createElement('script');
+            script.src = "btn_pressed.js";
+            document.body.appendChild(script);
+        });
+    </script>
+</body>
+</html>
