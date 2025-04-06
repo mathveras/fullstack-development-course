@@ -1,7 +1,7 @@
-raio = parseFloat(prompt('Type the radius of the circle: '));
+radius = parseFloat(prompt('Type the radius of the circle: '));
 
-if(!isNaN(raio)){
-    area = Math.PI * Math.pow(raio, 2);
+if(!isNaN(radius)){
+    area = Math.PI * Math.pow(radius, 2);
     alert(`The circle area is: ${area}`);
 }
 else{
