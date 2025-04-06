@@ -17,12 +17,13 @@ from operators import (
 )
 
 def operator_selector() -> int:
-    print("--- Ternary Operators 2 ---")
+    print("\033[H\033[J", end="")
+    print("\n--- Ternary Operators 2 ---")
 
-    print("\n 1. 🔞 Check Age Majority")
+    print("\n1. 🔞 Check Age Majority")
     print("2. ❓ Even or Odd")
     print("3. ⬆️  Uppercase or Lowercase ⬇️")
-    print("4. 😈 Test Your Precision")
+    print("4. 🎯4 Test Your Precision")
     print("0. 🚪 Exit")
 
     while True:
@@ -38,7 +39,7 @@ def operator_selector() -> int:
 
 def run_selected(selector: int) -> bool:
     if selector == 0:
-        print("Goodbye! 👋")
+        print("\nGoodbye! 👋")
         return False
 
     operators = {
@@ -48,7 +49,8 @@ def run_selected(selector: int) -> bool:
         4: test_your_precision
     }
 
-    return operators[selector]()
+    result = operators[selector]()
+    return True if result is None else result
 
 def main():
     while True:

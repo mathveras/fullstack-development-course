@@ -33,9 +33,9 @@ A simple interactive game where the player tries to guess a random number in a g
 
 - `index.html`: HTML structure of the game
 - `styles.css`: Styles and animations
-- `script.js`: Game logic and interactivity
+- `ngg.js`: Game logic and interactivity
 
-## Future Improvements (Maybe, if I ever remember...)
+## Future Improvements (Maybe, if ever remember...)
 
 - Word Guessing Game
 - More themes
