@@ -11,10 +11,16 @@ def handle_retry() -> bool | None:
         choice = input("\nWhat would you like to do?\n[R] Retry\n[X] Exit\n[M] Return to menu\nChoice: ").strip().upper()
         if choice in ["R", "X", "M"]:
             return True if choice == "R" else (None if choice == "M" else False)
-        print("Please enter R, X, or M")
+        print("❌ Please enter R, X, or M")
 
 
 def check_age_majority():
+    """Function to check if the user is a minor or an adult, including funny easter eggs for multiple specific values.
+    This function uses a match-case statement to handle different age inputs and provide corresponding responses.
+
+    Returns:
+        bool | None: True to retry, False to exit, None to return to main menu
+    """
     while True:
         print("\033[H\033[J", end="")  # ANSI escape code to clear the terminal
         print("""\n >>> Check Age Majority <<<
@@ -29,7 +35,7 @@ their numbers to unlock their special messages!
                 age = int(user_input)
                 break
             except ValueError:
-                print("\n❌ Please, enter a valid age!")
+                print("\n❌ Please, enter a valid age!\n")
 
         status = "an adult" if age >= 18 else "a minor"
 
@@ -82,22 +88,27 @@ their numbers to unlock their special messages!
 
 
 def check_even_odd():
-    import random
+    """Function to check if a number is even or odd, including funny easter eggs for each attempt.
+    This function uses the random module to provide different responses for even and odd numbers.
 
-    print("\033[H\033[J", end="")
-    print("""\n>>> Even or Odd Numbers <<<
+    Returns:
+        bool | None: True to retry, False to exit, None to return to main menu
+    """
+    import random
+    
+    while True:
+        while True:
+            print("\033[H\033[J", end="")
+            print("""\n>>> Even or Odd Numbers <<<
               
     Welcome to the even or odd number checker!
 This version contains a lot of random responses, try it
 multiple times to see them!
     """)
-    
-    while True:
-        while True:
             try:
                 number = int(input("Enter a number: ".strip()))
             except ValueError:
-                print("❌ That isn't a valid number. Try again.\n")
+                print("\n❌ That isn't a valid number. Try again.\n")
                 continue
             is_even = number % 2 == 0
 
@@ -140,13 +151,19 @@ multiple times to see them!
 
 
 def upper_or_lower():
+    """Function to check if a string is in UPPERCASE, lowercase, or MiXeD CaSe.
+    This function uses a while loop to handle user input and provides different responses based on the case of the string.
+    
+    Returns:
+        bool | None: True to retry, False to exit, None to return to main menu
+    """
     while True:
-        print("\033[H\033[J", end="")
-        print(">>> ⬆️ UPPERCASE or lowercase ⬇️ <<<\n")
 
         empty_count = 0   
         while True:
-            text = input("Enter some text: ").strip()
+            # print("\033[H\033[J", end="") | Couldn't get this to work. Was conflicting with the input, 'if not text:' was never triggered.
+            print(">>> ⬆️ UPPERCASE or lowercase ⬇️ <<<\n")
+            text = input("Enter some text: ")
             
             if not text:
                 empty_count += 1
@@ -167,7 +184,7 @@ def upper_or_lower():
             empty_count = 0
 
             response = (
-                f"'{text}' is in UPPERCASE. WHY ARE YOU SHOUTING BRO!!! 🗣️ 🔊" if text.isupper() else
+                f"'{text}' is in UPPERCASE. YOU SHOUTING!!! 🗣️ 🔊" if text.isupper() else
                 f"'{text}' is in lowercase. Shhhh...🤫" if text.islower() else
                 f"'{text}' is a mix of cases. Pick a side bro. 🙄" if text.isalpha() else
                 f"'{text}' Those are...just numbers. Are you trying to communicate in binary? 🤖" if text.isdigit() else
@@ -181,6 +198,12 @@ def upper_or_lower():
 
 
 def test_your_precision():
+    """Function to test the user's precision in typing a text with a specific number of characters.
+    This function generates a random number and asks the user to type a text with that exact number of characters.
+
+    Returns:
+        bool | None: True to retry, False to exit, None to return to main menu
+    """
     while True:
         import random
 

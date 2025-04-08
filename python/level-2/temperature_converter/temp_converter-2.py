@@ -16,11 +16,12 @@ from convertions import(
 
 
 def temp_selector() -> int:
-    """Function for the User to select which temperature conversion to use.
+    """This function clears the terminal and displays a menu with options for different temperature conversions.
 
     Returns:
         int: The integer number that will select what conversion to use.
     """
+    print("\033[H\033[J", end="")
     print("--- Temperature Converter 2 ---")
 
     print("\n1. Celsius to Fahrenheit")
@@ -37,13 +38,13 @@ def temp_selector() -> int:
             if 0 <= selector <= 6:
                 return selector
             else:
-                print("Please, enter a valid option! (0-6)")
+                print("❌ Please, enter a valid option! (0-6)")
         except ValueError:
-            print("Please, only enter integer numbers!")
+            print("❌ Please, only enter integer numbers!")
 
 
 def run_selected(selector: int) -> bool:
-    """Function that runs the User select converter.
+    """Function that runs the user selected temperature converter.
 
     Args:
         selector (int): The integer number that represents what temperature converter was selected.
@@ -64,7 +65,8 @@ def run_selected(selector: int) -> bool:
         6: kelvin_to_fahrenheit
     }
 
-    return conversion_functions[selector]()
+    result = conversion_functions[selector]()
+    return True if result is None else result
 
 
 def main():

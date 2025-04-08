@@ -17,13 +17,18 @@ from operators import (
 )
 
 def operator_selector() -> int:
+    """This function clears the terminal and displays a menu with options for different operators.
+    
+    Returns:
+        int: The integer number that will select what operator to use.
+    """
     print("\033[H\033[J", end="")
     print("\n--- Ternary Operators 2 ---")
 
     print("\n1. 🔞 Check Age Majority")
     print("2. ❓ Even or Odd")
     print("3. ⬆️  Uppercase or Lowercase ⬇️")
-    print("4. 🎯4 Test Your Precision")
+    print("4. 🎯 Test Your Precision")
     print("0. 🚪 Exit")
 
     while True:
@@ -38,6 +43,14 @@ def operator_selector() -> int:
 
 
 def run_selected(selector: int) -> bool:
+    """Function that runs the user selected operator.
+
+    Args:
+        selector (int): The integer number that represents what operator was selected.
+
+    Returns:
+        bool: True if the user selected an operator or False if exited the script.
+    """
     if selector == 0:
         print("\nGoodbye! 👋")
         return False
@@ -51,6 +64,7 @@ def run_selected(selector: int) -> bool:
 
     result = operators[selector]()
     return True if result is None else result
+
 
 def main():
     while True:
