@@ -10,7 +10,7 @@ A simple web UI where the user can compare multiple numeric entries.
 ## Technologies Used
 
 - HTML5
-- CSS3 
+- CSS3
 - JavaScript
 
 ## How it works?

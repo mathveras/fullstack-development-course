@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+  }
+  
+  /* Container layout */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 20px;
+    gap: 60px;
+    min-height: 10vh;
+    margin-top: 50px;
+  }
+  
+  /* Left panel (logo + message) */
+  .left-panel {
+    max-width: 500px;
+    margin-top: 45px;
+    margin-right: 30px;
+  }
+  
+  .fb_logo {
+    display: flex;
+    width: 320px;
+    margin-right: 10px;
+    margin-left: -30px;
+  }
+  
+  .left-panel p {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: -10px;
+    padding-right: 10px;
+  }
+  
+  /* Right panel (form box) */
+  .right-panel {
+    width: 100%;
+    max-width: 390px;
+    background: #fff;
+    padding: 15px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .right-panel a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login form */
+  .login-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 17px;
+  }
+  
+  .login-form button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .login-form button[type="submit"]:hover {
+    background-color: #3784e9;
+  }
+  
+  .login-form a {
+    display: block;
+    text-align: center;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #1877f2;
+    text-decoration: none;
+  }
+  
+  .login-form hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #dadde1;
+  }
+  
+  .new-account {
+    width: 55%;
+    background-color: #42b72a;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 17px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #42b72a;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    transition: background-color 0.3s;
+  }
+
+  .new-account:hover {
+    background-color: #36a420;
+    margin-left: 15;
+  }
+  
+  /* Page creation link */
+  .create-page {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #1c1e21;
+  }
+  
+  .create-page a {
+    font-weight: bold;
+    color: #1c1e21;
+    text-decoration: none;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #ffffff;
+    align-items: center;
+    padding: 30px 50px 45px 50px;
+    text-align: left;
+    font-size: 12px;
+    color: #737373;
+    margin-top: 100px;
+  }
+  
+  .footer-languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+    margin: 0 0 0 350px;
+    max-width: 1000px;
+  }
+
+
+  .footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+    margin: 0px 0 0 350px;
+    max-width: 1000px;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #737373;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer hr {
+    margin: 10px auto;
+    width: 60%;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .footer-copyright {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 355px;
+    font-size: 11px;
+    color: #737373;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .left-panel {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .left-panel .fb_logo {
+      margin: 0 auto;
+    }
+  
+    .right-panel {
+      max-width: 100%;
+    }
+  }
+  
