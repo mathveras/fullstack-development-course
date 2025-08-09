@@ -177,8 +177,8 @@ def upper_or_lower():
                     "Alright, I'm done. Talk to me when you're ready. 🤖 *silent treatment engaged*\n" if empty_count == 7 else None
                 )
                 print(response)
-                if empty_count >= 7:
-                    break
+                if empty_count > 7:
+                    return
                 continue
 
             empty_count = 0
